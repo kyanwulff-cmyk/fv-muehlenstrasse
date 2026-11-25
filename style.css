@@ -130,13 +130,20 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 5.5rem 0 6rem;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
   text-align: center;
 }
 
+.hero-inner {
+  width: 100%;
+}
+
 .hero-graphic {
-  margin: 0 auto 2.25rem;
-  max-width: 500px;
+  margin: 0 auto 2rem;
+  max-width: 480px;
   width: 100%;
 }
 
@@ -388,6 +395,7 @@ p {
     background-image:
       linear-gradient(rgba(241, 244, 249, 0.72), rgba(241, 244, 249, 0.72)),
       url("bilder/Header_KIGA_Muehlenstr.jpg");
+    min-height: 440px;
     padding: 4rem 0;
   }
 
