@@ -360,13 +360,56 @@ p {
   margin: 0;
 }
 
-/* Responsive */
+/* Responsive für Tablets & Smartphones */
 @media (max-width: 850px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.9rem 0;
+    gap: 0.7rem;
+  }
+
+  .logo-link img {
+    width: 175px;
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: 0.4rem 1.05rem;
+  }
+
+  .nav-list a {
+    font-size: 0.88rem;
+  }
+
   .hero {
     background-image:
-      linear-gradient(rgba(241, 244, 249, 0.72), rgba(241, 244, 249, 0.72)),
+      linear-gradient(rgba(246, 253, 254, 0.42), rgba(246, 253, 254, 0.52)),
       url("bilder/Header_KIGA_Muehlenstr.jpg");
-    min-height: 420px;
+    min-height: 380px;
+    padding: 2.5rem 0;
+  }
+
+  .hero-graphic {
+    max-width: 300px;
+    margin-bottom: 1.6rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 3.25rem 0;
   }
 
   .support-grid,
