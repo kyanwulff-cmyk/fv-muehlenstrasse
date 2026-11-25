@@ -2,8 +2,6 @@
   --petrol: #204056;
   --green: #69a96c;
   --purple: #856aa8;
-  --yellow: #fcc344;
-  --cyan: #8ae0e5;
   --text: #4a5868;
   --bg-ice: #f6fdfe;
   --bg-footer-bottom: #ebf2f7;
@@ -36,39 +34,39 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   color: var(--petrol);
   font-weight: 600;
   line-height: 1.25;
 }
 
 h2 {
-  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   margin-bottom: 1rem;
 }
 
-h5 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
   margin-bottom: 1rem;
 }
 
-/* Buttons im Original-Look (Pill-Form) */
+/* Button */
 .btn {
   display: inline-block;
   background-color: var(--petrol);
   color: var(--white);
   font-weight: 700;
   font-size: 1rem;
-  padding: 1rem 2.2rem;
+  padding: 0.95rem 2.2rem;
   border-radius: 30px;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(32, 64, 86, 0.18);
@@ -77,7 +75,6 @@ p {
 
 .btn:hover {
   background-color: var(--purple);
-  color: var(--white);
   transform: translateY(-1px);
 }
 
@@ -95,12 +92,12 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-height: 78px;
+  min-height: 76px;
   gap: 1rem;
 }
 
 .logo-link img {
-  width: 210px;
+  width: 205px;
 }
 
 .nav-list {
@@ -118,19 +115,18 @@ p {
   transition: color 0.2s ease;
 }
 
-.nav-list a:hover,
-.nav-list a.active {
+.nav-list a:hover {
   color: var(--purple);
 }
 
-/* Hero-Bereich mit Original-Illustration */
+/* Hero */
 .hero {
   background-color: #f1f4f9;
   background-image: url("bilder/Header_KIGA_Muehlenstr.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 580px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   padding: 3rem 0;
@@ -143,7 +139,7 @@ p {
 
 .hero-graphic {
   margin: 0 auto 2rem;
-  max-width: 480px;
+  max-width: 460px;
   width: 100%;
 }
 
@@ -160,43 +156,37 @@ p {
   background-color: var(--bg-ice);
 }
 
-.section-gradient {
-  background: linear-gradient(180deg, var(--bg-ice) 0%, var(--white) 100%);
-  padding-top: 2rem;
-}
-
-/* Willkommen-Bereich */
-.split-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.rounded-img {
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(32, 64, 86, 0.08);
+/* Kurzprofil */
+.narrow-box {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .accent-line {
   width: 64px;
   height: 4px;
   background-color: var(--green);
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   border-radius: 2px;
 }
 
-/* Über uns & 4er-Kacheln */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 3rem;
-  align-items: start;
+.lead {
+  font-size: 1.125rem;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* Vorstand */
+.section-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
 }
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -204,15 +194,88 @@ p {
   margin-bottom: 0.4rem;
 }
 
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.board-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(32, 64, 86, 0.04);
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--petrol);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.avatar-green {
+  background-color: var(--green);
+}
+
+.avatar-purple {
+  background-color: var(--purple);
+}
+
+.board-role {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+}
+
+.board-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Unterstützen & Kontakt */
+.support-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 2rem;
+}
+
+.support-box {
+  padding: 2.25rem;
+  border-radius: 16px;
+}
+
+.box-ice {
+  background-color: var(--bg-ice);
+  border: 1px solid #d9f2f5;
+}
+
+.box-mint {
+  background-color: rgba(133, 106, 168, 0.1);
+}
+
 .check-list {
   list-style: none;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .check-list li {
   position: relative;
-  padding-left: 1.6rem;
-  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .check-list li::before {
@@ -223,85 +286,10 @@ p {
   font-weight: 700;
 }
 
-.about-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.info-card {
-  background: var(--white);
-  padding: 1.75rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(32, 64, 86, 0.05);
-}
-
-.card-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: rgba(105, 169, 108, 0.18);
-  color: var(--petrol);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* Bildergalerie */
-.gallery-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.gallery-row {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.row-wide-left {
-  grid-template-columns: 2fr 1fr 1fr;
-}
-
-.row-wide-right {
-  grid-template-columns: 1fr 1fr 2fr;
-}
-
-.gallery-row img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Unterstützen & Mithelfen */
-.support-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 2rem;
-}
-
-.support-box {
-  padding: 2.5rem;
-  border-radius: 16px;
-}
-
-.box-ice {
-  background-color: var(--bg-ice);
-  border: 1px solid #d9f2f5;
-}
-
-.box-mint {
-  background-color: rgba(133, 106, 168, 0.12);
-}
-
 .bank-box {
   background: var(--white);
-  padding: 1.25rem;
+  padding: 1.2rem;
   border-radius: 10px;
-  margin-top: 1.25rem;
   border-left: 4px solid var(--green);
 }
 
@@ -309,46 +297,24 @@ p {
   margin-bottom: 0;
 }
 
-/* Spender */
-.section-sponsors {
-  padding-top: 1rem;
+.mail-link {
+  color: var(--petrol);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
-.center-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
+.mail-link:hover {
+  color: var(--purple);
 }
 
-.sponsors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.sponsor-item {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sponsor-item img {
-  max-height: 150px;
-  object-fit: contain;
-}
-
-/* Footer mit Original-Hintergrundgrafik */
+/* Footer */
 .site-footer {
   background-color: var(--white);
   border-top: 1px solid var(--border);
 }
 
 .footer-main {
-  padding: 5.5rem 0 4.5rem;
+  padding: 4.5rem 0 3.5rem;
   background-image: url("bilder/FV-KIGA-Muehlenstr-Footer2.png");
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -357,30 +323,35 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
   gap: 2rem;
+  align-items: center;
 }
 
-.footer-links {
-  list-style: none;
+.footer-col p {
+  margin: 0;
 }
 
-.footer-links li {
-  margin-bottom: 0.4rem;
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
 }
 
-.footer-links a {
-  color: var(--text);
+.footer-legal a {
+  color: var(--petrol);
+  font-weight: 600;
   text-decoration: none;
 }
 
-.footer-links a:hover {
+.footer-legal a:hover {
   color: var(--purple);
+  text-decoration: underline;
 }
 
 .footer-bottom {
   background-color: var(--bg-footer-bottom);
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   text-align: center;
   font-size: 0.875rem;
 }
@@ -389,41 +360,25 @@ p {
   margin: 0;
 }
 
-/* Responsive für Tablets & Smartphones */
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 850px) {
   .hero {
     background-image:
       linear-gradient(rgba(241, 244, 249, 0.72), rgba(241, 244, 249, 0.72)),
       url("bilder/Header_KIGA_Muehlenstr.jpg");
-    min-height: 440px;
-    padding: 4rem 0;
+    min-height: 420px;
   }
 
-  .split-2,
-  .about-layout,
-  .support-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .support-grid,
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footer-spacer {
     display: none;
   }
-}
 
-@media (max-width: 640px) {
-  .about-cards,
-  .row-wide-left,
-  .row-wide-right,
-  .sponsors-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-row img {
-    height: 240px;
+  .footer-legal {
+    justify-content: flex-start;
   }
 }
