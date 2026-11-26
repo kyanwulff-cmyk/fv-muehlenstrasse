@@ -91,42 +91,108 @@
 
     <!-- Unterstützen & Kontakt -->
     <section id="unterstuetzen" class="section section-white">
-      <div class="container support-grid">
-        <div class="support-box box-ice">
-          <h2>Mitglied werden &amp; Spenden</h2>
-          <p><strong>Schon ab 1 € im Monat könnt Ihr helfen:</strong></p>
-          <ul class="check-list">
-            <li>Beitrag kommt zu 100 % den Kindern zugute</li>
-            <li>Mitgliedschaft jederzeit kündbar</li>
-            <li>Alternativ auch als einmalige Spende möglich</li>
-          </ul>
+      <div class="container">
+        <div class="support-grid">
+          <div class="support-box box-ice">
+            <h2>Mitglied werden &amp; Spenden</h2>
+            <p><strong>Schon ab 1 € im Monat könnt Ihr helfen:</strong></p>
+            <ul class="check-list">
+              <li>Beitrag kommt zu 100 % den Kindern zugute</li>
+              <li>Mitgliedschaft jederzeit kündbar</li>
+              <li>Alternativ auch als einmalige Spende möglich</li>
+            </ul>
 
-          <div class="bank-box">
-            <p><strong>Unsere Bankverbindung:</strong></p>
+            <div class="bank-box">
+              <p><strong>Unsere Bankverbindung:</strong></p>
+              <p>
+                Bank: LZO – Landesparkasse zu Oldenburg<br>
+                Empfänger: Förderverein KIGA Mühlenstraße e.V.<br>
+                IBAN: DE26 2805 0100 0090 4591 65<br>
+                BIC: SLZODE22XXX
+              </p>
+            </div>
+          </div>
+
+          <div class="support-box box-mint">
+            <h2>Direkter Kontakt</h2>
+            <p>Ob Fragen zur Mitgliedschaft, Ideen für neue Projekte oder eine helfende Hand bei Veranstaltungen – wir freuen uns über jede Nachricht.</p>
+            
             <p>
-              Bank: LZO – Landesparkasse zu Oldenburg<br>
-              Empfänger: Förderverein KIGA Mühlenstraße e.V.<br>
-              IBAN: DE26 2805 0100 0090 4591 65<br>
-              BIC: SLZODE22XXX
+              <strong>Postanschrift:</strong><br>
+              Förderverein KIGA Mühlenstraße e.V.<br>
+              Mühlenstraße 55<br>
+              26180 Rastede
+            </p>
+
+            <p>
+              <strong>E-Mail:</strong><br>
+              <a href="mailto:fv-muehlenstrasse@t-online.de" class="mail-link">fv-muehlenstrasse@t-online.de</a>
             </p>
           </div>
         </div>
 
-        <div class="support-box box-mint">
-          <h2>Kontakt &amp; Mithelfen</h2>
-          <p>Ob Fragen zur Mitgliedschaft, Ideen für neue Projekte oder eine helfende Hand bei Veranstaltungen – wir freuen uns über jede Nachricht.</p>
-          
-          <p>
-            <strong>Postanschrift:</strong><br>
-            Förderverein KIGA Mühlenstraße e.V.<br>
-            Mühlenstraße 55<br>
-            26180 Rastede
-          </p>
+        <!-- Online-Formular -->
+        <div class="form-card">
+          <span class="eyebrow">Schnell &amp; unkompliziert</span>
+          <h2>Mitgliedschaft anfragen oder Nachricht schreiben</h2>
+          <p>Füllt einfach das Formular aus. Bei einem Beitrittswunsch senden wir Euch den Mitgliedsantrag umgehend per E-Mail zu.</p>
 
-          <p>
-            <strong>E-Mail:</strong><br>
-            <a href="mailto:info@fv-muehlenstrasse.de" class="mail-link">[info@fv-muehlenstrasse.de]</a>
-          </p>
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="EUER-ACCESS-KEY-HIER-EINTRAGEN">
+            <input type="hidden" name="subject" value="Neue Anfrage über die Website (Förderverein KIGA)">
+            <input type="hidden" name="from_name" value="Website Förderverein Mühlenstraße">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="anliegen">Worum geht es? *</label>
+                <select id="anliegen" name="Anliegen" required>
+                  <option value="Mitglied werden">Ich möchte Mitglied werden (ab 1 €/Monat)</option>
+                  <option value="Aktiv mithelfen">Ich möchte bei Aktionen/Veranstaltungen helfen</option>
+                  <option value="Allgemeine Anfrage">Allgemeine Frage oder Idee</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="beitrag">Gewünschter Monatsbeitrag (bei Mitgliedschaft)</label>
+                <input type="text" id="beitrag" name="Wunschbeitrag" placeholder="z. B. 1,00 € oder 2,50 €">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Vor- und Nachname *</label>
+                <input type="text" id="name" name="Name" placeholder="Max Mustermann" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input type="email" id="email" name="email" placeholder="name@beispiel.de" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefon">Telefonnummer (optional, für Rückfragen)</label>
+                <input type="tel" id="telefon" name="Telefon" placeholder="04402 ...">
+              </div>
+
+              <div class="form-group">
+                <label for="adresse">Anschrift (optional, für den Mitgliedsantrag)</label>
+                <input type="text" id="adresse" name="Anschrift" placeholder="Straße, Hausnummer, PLZ Ort">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="nachricht">Nachricht oder Name/Gruppe des Kindes (optional)</label>
+              <textarea id="nachricht" name="Nachricht" rows="4" placeholder="Eure Nachricht an den Vorstand..."></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="dsgvo" name="Datenschutz_akzeptiert" required>
+              <label for="dsgvo">
+                Ich habe die <a href="datenschutz.html" class="mail-link">Datenschutzerklärung</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage elektronisch übermittelt und gespeichert werden. *
+              </label>
+            </div>
+
+            <button type="submit" class="btn">Anfrage absenden</button>
+          </form>
         </div>
       </div>
     </section>
